@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "/app.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ],
+    "env": {
+        "MONGO_URI": "mongodb+srv://GLGL:GLGL1@nodeexpressprojects.hoya0qd.mongodb.net/TASK-MANAGER?retryWrites=true&w=majority&appName=NodeExpressProjects",
+        "PORT": "5000"
+
+    }
+}
