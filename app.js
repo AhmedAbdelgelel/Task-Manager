@@ -14,7 +14,7 @@ app.use(express.json());
 //routes
 
 app.use("/api/v1/tasks", tasks);
-app.use("/", (req, res, next) => {
+app.use("/default", (req, res, next) => {
   res.send("Default Home Page");
 });
 app.use(notFound);
