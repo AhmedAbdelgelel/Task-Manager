@@ -16,6 +16,7 @@ app.use(express.json());
 app.use("/api/v1/tasks", tasks);
 app.use("/default", (req, res, next) => {
   res.send("Default Home Page");
+  next();
 });
 app.use(notFound);
 app.use(errorHandlerMiddleWare);
