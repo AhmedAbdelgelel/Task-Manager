@@ -20,6 +20,6 @@
   },
   "description": "",
   "engines": {
-    "node": "22.5.1"
+    "node": "22.x"
   }
 }
