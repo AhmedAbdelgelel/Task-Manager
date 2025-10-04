@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const tasks = require("./routes/tasks");
 const connectDB = require("./db/connect"); // Import the connectDB module
-const notFound = require("./middleware/not-found");
-const errorHandlerMiddleWare = require("./middleware/error-handler");
+// const notFound = require("./middleware/not-found");
+// const errorHandlerMiddleWare = require("./middleware/error-handler");
 require("dotenv").config();
 
 connectDB();
@@ -18,8 +18,8 @@ app.use("/default", (req, res, next) => {
   res.send("Default Home Page");
   next();
 });
-app.use(notFound);
-app.use(errorHandlerMiddleWare);
+// app.use(notFound);
+// app.use(errorHandlerMiddleWare);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
